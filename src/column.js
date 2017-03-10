@@ -16,18 +16,19 @@ class Column extends Component{
       return(
         //var url="https://"+this.props.color[0].farm+".staticflickr.com/"+this.props.color[0].server+"/"+this.props.color[0].id+"_"+this.props.color[0].secret+".jpg";
         //<img src={url}/>
-        <div classpath="col-md-2">
 
-        <div classpath="row">
-          <img classpath="img-rounded" width="100px" height="100px" src={url}/>
+        <div className="col-md-2">
+        <div className="row">
+          <img className="img-rounded" width="100px" height="100px" src={url}/>
         </div>
-        <div classpath="row">
-          <img classpath="img-rounded" width="100px" height="100px" src={url1}/>
+        <div className="row">
+          <img className="img-rounded" width="100px" height="100px" src={url1}/>
         </div>
-        <div classpath="row">
-          <img classpath="img-rounded" width="100px" height="100px" src={url2}/>
+        <div className="row">
+          <img className="img-rounded" width="100px" height="100px" src={url2}/>
         </div>
       </div>
+
 
       );
     }

@@ -72,16 +72,18 @@ class App extends Component {
 
   render() {
     return (
-      <div classpath="row">
+      <div className="row">
         <h1>Flickr Rainbow</h1>
         <small>Search for something on Flickr and we will get a rainbow of it</small>
         <br />
         <form>
-          <input type="text" value={this.state.value} onChange={this.handleChange} classpath="from-control"/><br/>
+          <input type="text" value={this.state.value} onChange={this.handleChange}/><br/>
         </form>
         <h2>Your rainbow</h2>
         <Grid array={this.state}/>
       </div>
+
+
     );
   }
 }

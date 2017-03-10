@@ -9,13 +9,15 @@ class Grid extends Component{
 
   render(){
       return(
-        <div>
+        <div className="row">
+          <div className="col-md-12">
         <Column color={this.props.array.blue}/>
         <Column color={this.props.array.red}/>
         <Column color={this.props.array.green}/>
         <Column color={this.props.array.yellow}/>
         <Column color={this.props.array.orange}/>
         <Column color={this.props.array.purple}/>
+        </div>
       </div>
 
       );
