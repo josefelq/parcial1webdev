@@ -26,42 +26,42 @@ class App extends Component {
 
       //api call and set photos[]
       if(this.state.value){
-      fetch('/flickr/'+this.state.value+',blue')
+      fetch('/flickr/'+this.state.value+' blue')
       .then(result => {
         result.json().then(data => {
           this.setState({blue: data.photos.photo});
         });
       });
 
-      fetch('/flickr/'+this.state.value+',red')
+      fetch('/flickr/'+this.state.value+' red')
       .then(result => {
         result.json().then(data => {
           this.setState({red: data.photos.photo});
         });
       });
 
-      fetch('/flickr/'+this.state.value+',green')
+      fetch('/flickr/'+this.state.value+' green')
       .then(result => {
         result.json().then(data => {
           this.setState({green: data.photos.photo});
         });
       });
 
-      fetch('/flickr/'+this.state.value+',yellow')
+      fetch('/flickr/'+this.state.value+' yellow')
       .then(result => {
         result.json().then(data => {
           this.setState({yellow: data.photos.photo});
         });
       });
 
-      fetch('/flickr/'+this.state.value+',orange')
+      fetch('/flickr/'+this.state.value+' orange')
       .then(result => {
         result.json().then(data => {
           this.setState({orange: data.photos.photo});
         });
       });
 
-      fetch('/flickr/'+this.state.value+',purple')
+      fetch('/flickr/'+this.state.value+' purple')
       .then(result => {
         result.json().then(data => {
           this.setState({purple: data.photos.photo});

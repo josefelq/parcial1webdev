@@ -8,20 +8,17 @@ class Grid extends Component{
   }
 
   render(){
-    if(this.props.array.blue){
       return(
-      <div classpath="row thegrid">
-      <Column color={this.props.array.blue}/>
+        <div>
+        <Column color={this.props.array.blue}/>
+        <Column color={this.props.array.red}/>
+        <Column color={this.props.array.green}/>
+        <Column color={this.props.array.yellow}/>
+        <Column color={this.props.array.orange}/>
+        <Column color={this.props.array.purple}/>
       </div>
-      );
-    }
-    else{
-      return(
-        <div></div>
-      );
-    }
 
-
+      );
   }
 
 }
