@@ -57,6 +57,8 @@ app.get('/flickr/:query', function (req, res) {
 		  flickr.photos.search({
 		  	safe:1,
 		  	sort:"relevance",
+				page:1,
+				per_page:3,
 		  	text:req.params["query"]
 		  }, (err, data) => {
 		  	if (err) res.send(err);

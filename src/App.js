@@ -1,21 +1,86 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Grid from './grid';
 
 class App extends Component {
-  contructor(){
-    
+  constructor(props){
+    super(props);
+    this.state={
+      value: '',
+      cool: true,
+      blue:[],
+      red:[],
+      green:[],
+      yellow:[],
+      orange:[],
+      purple:[]
+    };
+
+    this.handleChange=this.handleChange.bind(this);
   }
+
+
+  handleChange(event){
+      this.setState({value: event.target.value});
+
+      //api call and set photos[]
+      if(this.state.value){
+      fetch('/flickr/'+this.state.value+',blue')
+      .then(result => {
+        result.json().then(data => {
+          this.setState({blue: data.photos.photo});
+        });
+      });
+
+      fetch('/flickr/'+this.state.value+',red')
+      .then(result => {
+        result.json().then(data => {
+          this.setState({red: data.photos.photo});
+        });
+      });
+
+      fetch('/flickr/'+this.state.value+',green')
+      .then(result => {
+        result.json().then(data => {
+          this.setState({green: data.photos.photo});
+        });
+      });
+
+      fetch('/flickr/'+this.state.value+',yellow')
+      .then(result => {
+        result.json().then(data => {
+          this.setState({yellow: data.photos.photo});
+        });
+      });
+
+      fetch('/flickr/'+this.state.value+',orange')
+      .then(result => {
+        result.json().then(data => {
+          this.setState({orange: data.photos.photo});
+        });
+      });
+
+      fetch('/flickr/'+this.state.value+',purple')
+      .then(result => {
+        result.json().then(data => {
+          this.setState({purple: data.photos.photo});
+        });
+      });
+    }
+  }
+
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div classpath="row">
+        <h1>Flickr Rainbow</h1>
+        <small>Search for something on Flickr and we will get a rainbow of it</small>
+        <br />
+        <form>
+          <input type="text" value={this.state.value} onChange={this.handleChange} classpath="from-control"/><br/>
+        </form>
+        <h2>Your rainbow</h2>
+        <Grid array={this.state}/>
       </div>
     );
   }
