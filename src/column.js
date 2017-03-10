@@ -19,13 +19,13 @@ class Column extends Component{
 
         <div className="col-md-2">
         <div className="row">
-          <img className="img-rounded" width="100px" height="100px" src={url}/>
+          <img className="img-rounded pic" width="150px" height="150px" src={url}/>
         </div>
         <div className="row">
-          <img className="img-rounded" width="100px" height="100px" src={url1}/>
+          <img className="img-rounded pic" width="150px" height="150px" src={url1}/>
         </div>
         <div className="row">
-          <img className="img-rounded" width="100px" height="100px" src={url2}/>
+          <img className="img-rounded pic" width="150px" height="150px" src={url2}/>
         </div>
       </div>
 

@@ -18,6 +18,8 @@ class App extends Component {
     };
 
     this.handleChange=this.handleChange.bind(this);
+
+    this.switch=this.switch.bind(this);
   }
 
 
@@ -70,11 +72,22 @@ class App extends Component {
     }
   }
 
+  switch(){
+    if(this.state.cool){
+      this.setState({cool: false});
+    }
+    else{
+      this.setState({cool: true});
+    }
+  }
+
   render() {
     return (
       <div className="row">
         <h1>Flickr Rainbow</h1>
         <small>Search for something on Flickr and we will get a rainbow of it</small>
+         <p>By <a href="https://github.com/josefelq">José Felipe Quiroga</a></p>
+         <a onClick={this.switch}>Switch!</a>
         <br />
         <form>
           <input type="text" value={this.state.value} onChange={this.handleChange}/><br/>

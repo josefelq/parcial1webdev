@@ -22,3 +22,15 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.pic{
+  margin: 10px;
+}
+
+.pic:hover{
+  transform: scale(1.2);
+}
+
+a:hover{
+  cursor: pointer;
+}
