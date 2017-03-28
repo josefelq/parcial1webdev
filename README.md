@@ -1,6 +1,6 @@
 # WEB DEV MIDTERM
 
-My creative addon:
+**My creative addon:**
 ```
 switches columns positions
 increase image size on hover
